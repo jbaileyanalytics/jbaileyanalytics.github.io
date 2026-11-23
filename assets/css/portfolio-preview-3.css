@@ -18,3 +18,9 @@
 .placeholder-grid .retail-card-art img{object-fit:contain}
 
 @media(min-width:761px){.placeholder-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Extend each project link over its card without changing keyboard navigation. */
+.placeholder-grid article{position:relative;transition:border-color .2s,box-shadow .2s}
+.placeholder-grid article .text-link::after{content:"";position:absolute;inset:0}
+.placeholder-grid article:hover,.placeholder-grid article:focus-within{border-color:#7ca99b;box-shadow:0 5px 18px rgba(16,58,48,.09)}
+.placeholder-grid article .text-link:focus-visible{outline:2px solid #126658;outline-offset:4px}
