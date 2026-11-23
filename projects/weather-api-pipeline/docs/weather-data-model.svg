@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1620" height="650" viewBox="0 0 1620 650" role="img" aria-labelledby="title desc">
+  <title id="title">Weather forecast data model</title>
+  <desc id="desc">Location, forecast snapshot, and hourly forecast tables, with primary keys, foreign keys, data types, and one-to-many relationships.</desc>
+  <style>
+    .background{fill:#f5f8fb}.box{fill:#fff;stroke:#86b9df;stroke-width:2}.header{fill:#267fc2}
+    .title{fill:#fff;font:700 17px 'Segoe UI',Arial,sans-serif;letter-spacing:.3px}
+    .field{fill:#233d50;font:15px 'Segoe UI',Arial,sans-serif}.type{fill:#6b8291;font:14px 'Segoe UI',Arial,sans-serif}
+    .key{fill:#2476ad;font:700 12px 'Segoe UI',Arial,sans-serif}.rule{stroke:#e7eff5;stroke-width:1}
+    .link{fill:none;stroke:#65a7d7;stroke-width:2}.marker{stroke:#65a7d7;stroke-width:2;fill:#f5f8fb}
+    .caption{fill:#597184;font:13px 'Segoe UI',Arial,sans-serif}.heading{fill:#243f52;font:600 21px 'Segoe UI',Arial,sans-serif}
+  </style>
+  <rect class="background" width="1620" height="650"/>
+  <text class="heading" x="30" y="38">Weather forecast relationships</text>
+  <text class="caption" x="30" y="61">One forecast snapshot contains multiple hourly forecasts. Locations can have multiple snapshots.</text>
+  <!-- Location table -->
+  <rect class="box" x="30" y="96" width="430" height="280" rx="4"/>
+  <path class="header" d="M34 96h422a4 4 0 0 1 4 4v35H30v-35a4 4 0 0 1 4-4z"/>
+  <text class="title" x="48" y="122">DIM_LOCATION</text>
+  <text class="field" x="48" y="160">location_id</text><text class="key" x="289" y="160">PK</text><text class="type" x="342" y="160">bigint</text><path class="rule" d="M46 170h398"/>
+  <text class="field" x="48" y="194">location_code</text><text class="key" x="289" y="194">UK</text><text class="type" x="342" y="194">text</text><path class="rule" d="M46 204h398"/>
+  <text class="field" x="48" y="228">name</text><text class="type" x="342" y="228">text</text><path class="rule" d="M46 238h398"/>
+  <text class="field" x="48" y="262">requested_latitude</text><text class="type" x="342" y="262">numeric</text><path class="rule" d="M46 272h398"/>
+  <text class="field" x="48" y="296">requested_longitude</text><text class="type" x="342" y="296">numeric</text><path class="rule" d="M46 306h398"/>
+  <text class="field" x="48" y="330">display_timezone</text><text class="type" x="342" y="330">text</text>
+  <!-- Snapshot table -->
+  <rect class="box" x="530" y="96" width="500" height="350" rx="4"/>
+  <path class="header" d="M534 96h492a4 4 0 0 1 4 4v35H530v-35a4 4 0 0 1 4-4z"/>
+  <text class="title" x="548" y="122">FORECAST_SNAPSHOT</text>
+  <text class="field" x="548" y="160">forecast_snapshot_id</text><text class="key" x="849" y="160">PK</text><text class="type" x="900" y="160">bigint</text><path class="rule" d="M546 170h468"/>
+  <text class="field" x="548" y="194">location_id</text><text class="key" x="849" y="194">FK</text><text class="type" x="900" y="194">bigint</text><path class="rule" d="M546 204h468"/>
+  <text class="field" x="548" y="228">capture_token</text><text class="key" x="849" y="228">UK</text><text class="type" x="900" y="228">uuid</text><path class="rule" d="M546 238h468"/>
+  <text class="field" x="548" y="262">retrieved_at_utc</text><text class="type" x="900" y="262">timestamptz</text><path class="rule" d="M546 272h468"/>
+  <text class="field" x="548" y="296">returned_latitude</text><text class="type" x="900" y="296">numeric</text><path class="rule" d="M546 306h468"/>
+  <text class="field" x="548" y="330">returned_longitude</text><text class="type" x="900" y="330">numeric</text><path class="rule" d="M546 340h468"/>
+  <text class="field" x="548" y="364">provider</text><text class="type" x="900" y="364">text</text><path class="rule" d="M546 374h468"/>
+  <text class="field" x="548" y="398">forecast_issue_time</text><text class="type" x="900" y="398">timestamptz</text>
+  <!-- Forecast table -->
+  <rect class="box" x="1100" y="96" width="490" height="350" rx="4"/>
+  <path class="header" d="M1104 96h482a4 4 0 0 1 4 4v35h-490v-35a4 4 0 0 1 4-4z"/>
+  <text class="title" x="1118" y="122">FACT_HOURLY_FORECAST</text>
+  <text class="field" x="1118" y="160">hourly_forecast_id</text><text class="key" x="1400" y="160">PK</text><text class="type" x="1453" y="160">bigint</text><path class="rule" d="M1116 170h458"/>
+  <text class="field" x="1118" y="194">forecast_snapshot_id</text><text class="key" x="1400" y="194">FK</text><text class="type" x="1453" y="194">bigint</text><path class="rule" d="M1116 204h458"/>
+  <text class="field" x="1118" y="228">location_id</text><text class="key" x="1400" y="228">FK</text><text class="type" x="1453" y="228">bigint</text><path class="rule" d="M1116 238h458"/>
+  <text class="field" x="1118" y="262">valid_at_utc</text><text class="type" x="1453" y="262">timestamptz</text><path class="rule" d="M1116 272h458"/>
+  <text class="field" x="1118" y="296">temperature_c</text><text class="type" x="1453" y="296">numeric</text><path class="rule" d="M1116 306h458"/>
+  <text class="field" x="1118" y="330">precipitation_probability_pct</text><text class="type" x="1453" y="330">numeric</text><path class="rule" d="M1116 340h458"/>
+  <text class="field" x="1118" y="364">precipitation_mm</text><text class="type" x="1453" y="364">numeric</text><path class="rule" d="M1116 374h458"/>
+  <text class="field" x="1118" y="398">wind_speed_kmh</text><text class="type" x="1453" y="398">numeric</text>
+  <!-- Crow's-foot connectors, parent to zero or many children -->
+  <path class="link" d="M460 178H530 M1030 212H1100 M245 376V512H1345V446"/>
+  <path class="link" d="M473 170v16 M1087 204l13 8-13 8 M517 170l13 8-13 8 M1337 459l8-13 8 13 M237 389h16"/>
+  <circle class="marker" cx="505" cy="178" r="5"/><circle class="marker" cx="1075" cy="212" r="5"/><circle class="marker" cx="1345" cy="472" r="5"/>
+  <text class="caption" x="30" y="574">PK  Primary key</text><text class="caption" x="165" y="574">FK  Foreign key</text><text class="caption" x="302" y="574">UK  Unique key</text>
+  <text class="caption" x="30" y="601">Local PostgreSQL schema. Forecast retrieval time is not a verified provider issue time.</text>
+</svg>

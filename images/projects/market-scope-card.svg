@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="title desc">
+  <title id="title">MarketScope historical stock analytics</title>
+  <desc id="desc">Dark stock dashboard illustration with a heatmap and closing price chart.</desc>
+  <rect width="720" height="360" fill="#0d171c"/>
+  <rect x="22" y="20" width="676" height="320" rx="10" fill="#14242a" stroke="#355054"/>
+  <text x="42" y="55" fill="#e5f4ef" font-family="Segoe UI, sans-serif" font-size="19" font-weight="700" letter-spacing="2">MARKETSCOPE</text>
+  <text x="42" y="76" fill="#90aca8" font-family="Segoe UI, sans-serif" font-size="11" letter-spacing="1">HISTORICAL MARKET ANALYTICS</text>
+  <text x="42" y="117" fill="#d3e9e0" font-family="Segoe UI, sans-serif" font-size="12">SESSION MOVEMENT</text>
+  <g stroke="#14242a" stroke-width="4">
+    <rect x="42" y="130" width="80" height="52" fill="#9d3545"/><rect x="122" y="130" width="64" height="52" fill="#236e60"/><rect x="186" y="130" width="66" height="52" fill="#9d3545"/><rect x="252" y="130" width="65" height="52" fill="#702f3c"/>
+    <rect x="42" y="182" width="59" height="52" fill="#196e5b"/><rect x="101" y="182" width="85" height="52" fill="#793340"/><rect x="186" y="182" width="52" height="52" fill="#9f3946"/><rect x="238" y="182" width="79" height="52" fill="#267966"/>
+    <rect x="42" y="234" width="70" height="52" fill="#77323e"/><rect x="112" y="234" width="74" height="52" fill="#9c3946"/><rect x="186" y="234" width="75" height="52" fill="#237260"/><rect x="261" y="234" width="56" height="52" fill="#77323e"/>
+  </g>
+  <g font-family="Segoe UI, sans-serif" font-weight="600" text-anchor="middle" fill="#e8f6ef" font-size="10"><text x="82" y="159">AAPL</text><text x="154" y="159">MSFT</text><text x="219" y="159">NVDA</text><text x="284" y="159">AMZN</text><text x="72" y="210">META</text><text x="144" y="210">GOOGL</text><text x="212" y="210">AMD</text><text x="277" y="210">TSLA</text></g>
+  <text x="355" y="117" fill="#d3e9e0" font-family="Segoe UI, sans-serif" font-size="12">DAILY CLOSING PRICES</text>
+  <path d="M355 260 L380 238 L405 250 L430 214 L455 220 L480 201 L505 224 L530 183 L555 192 L580 164 L605 172 L630 150 L666 155" fill="none" stroke="#39d8aa" stroke-width="4" stroke-linejoin="round"/>
+  <line x1="355" x2="667" y1="288" y2="288" stroke="#3d5658"/>
+  <text x="355" y="311" fill="#90aca8" font-family="Segoe UI, sans-serif" font-size="11">PRICE HISTORY  /  DATA QUALITY  /  PYTHON</text>
+</svg>

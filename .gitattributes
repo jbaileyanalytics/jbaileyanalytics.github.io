@@ -1,0 +1,3 @@
+# Snapshot checksums must remain stable across Windows and Linux checkouts.
+projects/nfl-analytics/data/snapshots/**/*.csv -text
+projects/nfl-analytics/data/snapshots/**/*.parquet binary

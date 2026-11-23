@@ -1,0 +1,57 @@
+version: 2
+sources:
+  - name: raw
+    schema: main
+    tables:
+      - name: raw_amazon
+      - name: raw_inventory
+      - name: raw_international
+      - name: raw_price_may_2022
+      - name: raw_price_march_2021
+      - name: raw_expense_iigf
+      - name: raw_warehouse_comparison
+      - name: raw_quote_registry
+      - name: raw_entity_current
+      - name: raw_entity_registry
+      - name: raw_product_registry
+      - name: raw_source_manifest
+models:
+  - name: stg_sales_lines
+    columns:
+      - name: sales_line_id
+        data_tests: [unique, not_null]
+      - name: product_id
+        data_tests: [not_null]
+  - name: stg_inventory
+    columns:
+      - name: inventory_snapshot_id
+        data_tests: [unique, not_null]
+      - name: product_id
+        data_tests: [unique, not_null]
+  - name: dim_product
+    columns:
+      - name: product_id
+        data_tests: [unique, not_null]
+      - name: sku
+        data_tests: [unique, not_null]
+  - name: stg_international_sales
+    columns:
+      - name: international_sale_id
+        data_tests: [unique, not_null]
+  - name: stg_price_sheet
+    columns:
+      - name: price_sheet_row_id
+        data_tests: [unique, not_null]
+  - name: stg_expense_rows
+    columns:
+      - name: expense_row_id
+        data_tests: [unique, not_null]
+  - name: stg_warehouse_rows
+    columns:
+      - name: warehouse_row_id
+        data_tests: [unique, not_null]
+
+  - name: fact_price_quote
+    columns:
+      - name: price_quote_id
+        data_tests: [unique, not_null]

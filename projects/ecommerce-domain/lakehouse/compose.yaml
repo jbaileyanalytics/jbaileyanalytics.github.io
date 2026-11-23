@@ -1,0 +1,10 @@
+services:
+  lakehouse:
+    build: .
+    working_dir: /app
+    environment:
+      DBT_PROFILES_DIR: /app
+    volumes:
+      - ../../../datasets/E-Commerce Sales Dataset:/input:ro
+      - ../results/lakehouse-direct:/output
+    entrypoint: ["python", "run.py"]

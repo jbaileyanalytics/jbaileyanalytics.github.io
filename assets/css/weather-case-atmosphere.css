@@ -1,0 +1,85 @@
+/* Alternate weather case-study concept; the original page and styles remain intact. */
+.weather-atmosphere{--weather-blue:#234d75;--weather-ink:#182d40;background:#e8edf1;color:var(--weather-ink)}
+.weather-atmosphere .site-header,.weather-atmosphere .site-footer{background:#e8edf1}
+.weather-atmosphere .interior-hero{position:relative;overflow:hidden;isolation:isolate;background:#122c49;color:#f5f9fc;padding:64px 0 55px}
+.weather-atmosphere .interior-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 79% 50%,#486e8f 0%,#254c70 22%,transparent 55%),linear-gradient(110deg,#10283f 0%,#183a59 65%,#2b567a 100%);z-index:-2}
+.weather-atmosphere .interior-hero>.wrap{position:relative;min-height:495px}
+.weather-atmosphere .breadcrumb,.weather-atmosphere .interior-hero .lede{color:#d3e2ed}
+.weather-atmosphere .interior-hero .eyebrow,.weather-atmosphere .interior-hero .status{color:#a9d3e9}
+.weather-atmosphere .interior-hero h1{max-width:650px;position:relative;z-index:1;font-size:clamp(48px,6vw,78px);letter-spacing:-3px}
+.weather-atmosphere .interior-hero .lede{max-width:570px;position:relative;z-index:1;font-size:19px}
+.weather-atmosphere .case-hero-actions{position:relative;z-index:1}
+.weather-atmosphere .case-hero-actions a{background:#cbe3ef;color:#17364d}
+.weather-atmosphere .case-hero-actions a+a{background:transparent;color:#eaf5fb;border-color:#92b2c8}
+.weather-atmosphere .case-hero-proof{max-width:570px;border-color:#7894a5;position:relative;z-index:1}
+.weather-atmosphere .case-hero-caption{color:#bdd4df;position:relative;z-index:1}
+.weather-hero-art{position:absolute;right:20px;top:6px;width:440px;height:440px;overflow:hidden;border:1px solid #a6c6d366;background:linear-gradient(155deg,#b2d1de16,#a7c8d80a);border-radius:50%}
+.weather-orbit{position:absolute;left:50%;top:50%;border:1px solid #bdd9e654;border-radius:50%;transform:translate(-50%,-50%)}
+.orbit-one{width:83%;height:83%}.orbit-two{width:63%;height:63%}.orbit-three{width:40%;height:40%}
+.weather-sun{position:absolute;left:33%;top:23%;width:34%;height:34%;border-radius:50%;background:radial-gradient(circle at 35% 35%,#e0c7a1,#b58f71 70%,#9b7b70);box-shadow:0 0 55px #c5a88b55}
+.weather-horizon{position:absolute;left:-20%;right:-20%;top:51%;height:45%;border-top:1px solid #d5e5e999;background:linear-gradient(170deg,#a5c8d230,#143b5e55 55%);transform:rotate(-12deg)}
+.weather-art-label,.weather-art-coordinates{position:absolute;color:#d8e8ec;font-size:9px;letter-spacing:1.4px;left:18%;bottom:24%;white-space:nowrap}.weather-art-coordinates{bottom:18%;color:#b8d1da}
+.weather-atmosphere .case-meta{border-color:#bfccd5}.weather-atmosphere .case-meta dt,.weather-atmosphere .eyebrow{color:#315e81}
+.weather-atmosphere .case-layout{grid-template-columns:190px minmax(0,1fr);gap:54px}.weather-atmosphere .case-nav{background:transparent;border-top:2px solid #577e9b;padding:18px 0}.weather-atmosphere .case-nav a{color:#466178}
+.weather-atmosphere .case-body section{background:transparent;border:0;border-top:1px solid #bdccd6;padding:35px 0 42px;margin:0}
+.weather-atmosphere .case-body section:first-child{border-top:0;padding-top:4px}.weather-atmosphere .case-body h2{color:#172f45}.weather-atmosphere .case-body p,.weather-atmosphere .case-body li{color:#4a6173}
+.weather-atmosphere .case-cover{margin:28px 0}.weather-atmosphere .case-cover img{border-radius:6px}.weather-atmosphere .case-cover figcaption{color:#526b7b}
+.weather-atmosphere .outlook-cards{gap:1px;background:#c0d0da}.weather-atmosphere .outlook-cards article{background:#d8e5ec;color:#193b55;padding:25px}.weather-atmosphere .outlook-cards article>span{color:#315e81}.weather-atmosphere .outlook-cards strong{color:#173d5a}.weather-atmosphere .case-body .outlook-cards p{color:#506b7c}.weather-atmosphere .outlook-cards article>small{color:#526c7d}.weather-atmosphere .outlook-track{background:#adc4d0}.weather-atmosphere .outlook-track i{background:#2d709a}
+.weather-atmosphere .decision-cards article,.weather-atmosphere .workflow li{background:#d9e6ed;border-color:#517b99}.weather-atmosphere .workflow li:before,.weather-atmosphere .case-body .tech,.weather-atmosphere .outlook-footnote a{color:#315e81}
+.weather-atmosphere .weather-note,.weather-atmosphere .weather-summary>div{background:#d8e6ed;border-color:#3e7295}.weather-atmosphere .weather-summary strong{color:#173d5a}.weather-atmosphere .case-detail{background:#dce8ee;border-color:#bdcfd9}.weather-atmosphere .case-detail summary{color:#244f6d}.weather-atmosphere .weather-results th{color:#315e81}.weather-atmosphere .run-proof{background:#183c5b}.weather-atmosphere .run-status{background:#285b79;color:#d2eef8}.weather-atmosphere .site-contact{background:#d8e4ea}
+@media(max-width:1000px){.weather-hero-art{opacity:.46;right:-90px}.weather-atmosphere .interior-hero .lede{max-width:520px}}
+@media(max-width:850px){.weather-atmosphere .case-layout{grid-template-columns:1fr;gap:22px}.weather-atmosphere .case-nav{display:flex;position:static;flex-direction:row;flex-wrap:wrap}.weather-atmosphere .interior-hero>.wrap{min-height:0}}
+@media(max-width:600px){.weather-atmosphere .interior-hero{padding:45px 0}.weather-hero-art{width:270px;height:270px;right:-105px;top:5px;opacity:.24}.weather-atmosphere .interior-hero h1{font-size:44px;letter-spacing:-1.5px}.weather-atmosphere .interior-hero .lede{font-size:16px}.weather-atmosphere .case-body section{padding:28px 0}.weather-atmosphere .outlook-cards{gap:1px}.weather-atmosphere .case-cover{margin:22px 0}}
+/* Pipeline-inspired hero overview. */
+.weather-atmosphere .hero-flow{position:absolute;right:0;top:18px;width:420px;max-width:40%;border:1px solid #83a7bc;background:#1a3d5b;padding:22px 25px;box-shadow:0 18px 38px #0b203a44}
+.hero-flow-head{display:flex;justify-content:space-between;gap:12px;color:#d5eaf4;font-size:9px;font-weight:700;letter-spacing:1.1px;border-bottom:1px solid #7291a5;padding-bottom:15px}
+.hero-flow-head span:last-child{color:#a6c6d6;font-weight:400;text-align:right}.hero-flow-steps{position:relative;padding:7px 0}.hero-flow-steps:before{content:'';position:absolute;left:16px;top:32px;bottom:32px;width:1px;background:#85b4c7}.hero-flow-steps>div{display:flex;align-items:center;gap:16px;padding:12px 0;position:relative}.flow-num{display:grid;place-items:center;flex:none;width:33px;height:33px;border:1px solid #aacbd9;background:#284f6b;color:#e7f6fc;font-size:10px}.hero-flow-steps strong{display:block;color:#f5f9fb;font-size:15px}.hero-flow-steps small{display:block;color:#bdd2df;font-size:12px;margin-top:1px}.hero-flow-foot{color:#b8d6e3;border-top:1px solid #7291a5;padding-top:14px;font-size:10px;letter-spacing:1px}.hero-flow-foot span{padding:0 6px;color:#82acc0}
+@media(max-width:1000px){.weather-atmosphere .hero-flow{width:340px;max-width:38%;padding:17px}.hero-flow-steps>div{padding:9px 0}}
+@media(max-width:760px){.weather-atmosphere .hero-flow{position:relative;top:auto;right:auto;max-width:none;width:auto;margin:25px 0 0}.weather-atmosphere .interior-hero>.wrap{display:flex;flex-direction:column}.weather-atmosphere .hero-flow{order:10}.weather-atmosphere .case-hero-caption{order:9}}
+/* Lower-glare reading surfaces for the weather case study. */
+.weather-atmosphere{background:#c5d3dc;color:#172f42}
+.weather-atmosphere .site-header,.weather-atmosphere .site-footer{background:#c5d3dc}
+.weather-atmosphere .case-meta{border-color:#94abb9}
+.weather-atmosphere .case-meta dd{color:#344f62}
+.weather-atmosphere .case-layout{border-top:1px solid #a1b6c2;padding-top:24px}
+.weather-atmosphere .case-nav{border-color:#567a91}
+.weather-atmosphere .case-nav a{color:#2f5168}
+.weather-atmosphere .case-body section{border-color:#9db4c1}
+.weather-atmosphere .case-body p,.weather-atmosphere .case-body li{color:#344e60}
+.weather-atmosphere .outlook-cards{background:#91adbc}
+.weather-atmosphere .outlook-cards article{background:#afc7d4}
+.weather-atmosphere .case-body .outlook-cards p,.weather-atmosphere .outlook-cards article>small{color:#344f60}
+.weather-atmosphere .outlook-track{background:#819eaf}
+.weather-atmosphere .decision-cards article,.weather-atmosphere .workflow li,.weather-atmosphere .weather-note,.weather-atmosphere .weather-summary>div{background:#b4cbd7}
+.weather-atmosphere .case-detail{background:#b6ccd8;border-color:#90aab9}
+.weather-atmosphere .weather-results th,.weather-atmosphere .weather-results td{border-color:#91aab8}
+.weather-atmosphere .weather-results caption,.weather-atmosphere .case-cover figcaption,.weather-atmosphere .weather-figure figcaption{color:#3d596b}
+.weather-atmosphere .data-note{background:#b4cbd7;border-color:#3e7295}
+.weather-atmosphere .site-contact{background:#b6cbd7}
+.weather-atmosphere .site-contact p{color:#345064}
+/* Balanced blue-gray surfaces: softer than white without a heavy cast. */
+.weather-atmosphere{background:#d8e1e6}
+.weather-atmosphere .site-header,.weather-atmosphere .site-footer{background:#d8e1e6}
+.weather-atmosphere .case-meta{border-color:#aebfca}
+.weather-atmosphere .case-layout{border-color:#b1c2cc}
+.weather-atmosphere .case-body section{border-color:#b1c2cc}
+.weather-atmosphere .outlook-cards{background:#a9beca}
+.weather-atmosphere .outlook-cards article{background:#c8d9e2}
+.weather-atmosphere .outlook-track{background:#9db7c5}
+.weather-atmosphere .decision-cards article,.weather-atmosphere .workflow li,.weather-atmosphere .weather-note,.weather-atmosphere .weather-summary>div,.weather-atmosphere .data-note{background:#c9dbe4}
+.weather-atmosphere .case-detail{background:#cddde5;border-color:#a9bfca}
+.weather-atmosphere .weather-results th,.weather-atmosphere .weather-results td{border-color:#a6bcc8}
+.weather-atmosphere .site-contact{background:#c6d8e1}
+/* Project overview and section navigation */
+.weather-atmosphere .case-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;background:#c8d9e2;border:1px solid #a8bdc9;border-top:3px solid #527b96;padding:0;margin:0 0 32px}
+.weather-atmosphere .case-meta>div{padding:21px 24px;min-width:0}
+.weather-atmosphere .case-meta>div+div{border-left:1px solid #abc1cd}
+.weather-atmosphere .case-meta dt{font-size:10px;letter-spacing:1.4px;margin-bottom:9px;color:#315d79}
+.weather-atmosphere .case-meta dd{font-size:14px;font-weight:600;line-height:1.45;color:#203e53}
+.weather-atmosphere .case-nav{display:flex;align-items:stretch;gap:0;background:#c9dbe4;border:1px solid #a9c0cd;border-top:3px solid #527b96;padding:13px 0 11px}
+.weather-atmosphere .case-nav-label{display:block;padding:4px 17px 12px;font-size:10px;font-weight:700;letter-spacing:1.4px;color:#406780}
+.weather-atmosphere .case-nav a{display:block;padding:8px 15px;border-left:2px solid transparent;font-size:13px;line-height:1.4;color:#294e67;text-decoration:none;transition:background-color .15s,border-color .15s}
+.weather-atmosphere .case-nav a:hover,.weather-atmosphere .case-nav a:focus-visible{background:#b8cfdb;border-left-color:#315e81;color:#16374e}
+@media(max-width:850px){.weather-atmosphere .case-nav{flex-direction:row;flex-wrap:wrap;gap:2px 4px;padding:12px}.weather-atmosphere .case-nav-label{width:100%;padding:3px 7px 7px}.weather-atmosphere .case-nav a{padding:7px 9px}.weather-atmosphere .case-meta{grid-template-columns:repeat(2,minmax(0,1fr))}.weather-atmosphere .case-meta>div:nth-child(3){border-left:0;border-top:1px solid #abc1cd}.weather-atmosphere .case-meta>div:nth-child(4){border-top:1px solid #abc1cd}}
+@media(max-width:480px){.weather-atmosphere .case-meta>div{padding:15px}.weather-atmosphere .case-meta dd{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.weather-atmosphere .case-nav a{transition:none}}

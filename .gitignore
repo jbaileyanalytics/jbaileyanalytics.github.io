@@ -1,0 +1,101 @@
+tmp/
+__pycache__/
+*.py[cod]
+.venv/
+.venv-*/
+venv/
+node_modules/
+.vscode/
+.idea/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+.aws/
+.kaggle/
+kaggle.json
+*credentials*.json
+*service-account*.json
+secrets.*
+*.secret
+id_rsa
+id_ed25519
+*.pem
+*.key
+*.p12
+*.pfx
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+# Keep downloaded datasets, local databases, exports, and logs out of the public repo.
+/datasets/
+/kagglehub
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.duckdb
+*.parquet
+*.zip
+*.log
+# Resume files and Power BI packages can contain private details or embedded data.
+/output/pdf/
+*.pbix
+!/assets/downloads/retail-lakehouse-report.pbix
+!/assets/downloads/healthcare-analytics-report.pbix
+*.pbit
+*.abf
+**/.pbi/
+**/.platform
+projects/nfl-analytics/results/
+# Older NFL Power BI authoring files are retained locally; the public showcase is the static dashboard.
+projects/nfl-analytics/powerbi/
+projects/nfl-analytics/website/data/*
+!projects/nfl-analytics/website/data/2025.json
+!projects/nfl-analytics/website/data/2026.json
+!projects/nfl-analytics/website/data/seasons.json
+**/.pbi/cache.abf
+**/.pbi/localSettings.json
+**/.pbi/unappliedChanges.json
+projects/nfl-analytics/data/raw/
+projects/nfl-analytics/data/snapshots/
+projects/nfl-analytics/data/current_*.json
+projects/nfl-analytics/.ingest-staging/
+projects/ecommerce-domain/results/
+projects/ecommerce-domain/lakehouse/logs/
+# Local report-authoring scripts and templates are not part of the public project.
+projects/ecommerce-domain/lakehouse/powerbi/
+projects/ecommerce-domain/report_helpers.py
+projects/stock-market-analytics/results/
+projects/stock-market-analytics/docs/source-profile.json
+# Retain superseded website design notes locally.
+projects/stock-market-analytics/docs/dashboard-requirements.md
+projects/weather-api-pipeline/results/
+projects/weather-api-pipeline/api_response
+# Keep the unvalidated AWS infrastructure design local until it is ready for review.
+projects/weather-api-cloud/
+# Personal study notes are local only and are not part of the public portfolio.
+/private-notes/
+# Personal reference materials are not part of the public portfolio.
+/skills/
+/templates/
+/docs/
+/scripts/build_public_resume.py
+/scripts/build_portfolio_pages.py
+/scripts/render_portfolio_models.py
+/scripts/build_detailed_models.py
+/images/john-bailey-portrait-preview.png
+/legacy-portfolio-assets/
+# Editable architecture sources stay local; project documentation displays PNGs.
+/projects/*/docs/architecture-overview.svg
+/projects/*/docs/architecture-detail.svg
+# Semantic models can contain machine paths or embedded data. Generate and review
+# a sanitized shareable model before publishing a complete PBIP project.
+**/*.SemanticModel/model.bim

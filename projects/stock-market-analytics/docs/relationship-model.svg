@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1720" height="511" viewBox="0 0 1720 511" role="img" aria-labelledby="title desc">
+<title id="title">stock-market-analytics relationship model</title>
+<desc id="desc">Business-facing price model. Operational audit tables are documented separately.</desc>
+<style>.bg{fill:#f5f8fb}.box{fill:#fff;stroke:#86b9df;stroke-width:2}.head{fill:#267fc2}.ht{fill:#fff;font:700 16px Segoe UI,Arial}.field{fill:#233d50;font:14px Segoe UI,Arial}.type{fill:#6b8291;font:13px Segoe UI,Arial}.key{fill:#2476ad;font:700 11px Segoe UI,Arial}.rule{stroke:#e7eff5}.edge{fill:none;stroke:#65a7d7;stroke-width:1.7}.cap{fill:#597184;font:13px Segoe UI,Arial}.heading{fill:#243f52;font:600 21px Segoe UI,Arial}</style>
+<rect class="bg" width="1720" height="511"/>
+<text class="heading" x="30" y="36">Stock Market Analytics relationships</text>
+<text class="cap" x="30" y="62">Business-facing price model. Operational audit tables are documented separately.</text>
+<path class="edge" d="M1110 157 H1135 V217 H1190 M1120 150 v14 M1178 210 l12 7 -12 7"/>
+<circle cx="1170" cy="217" r="4" fill="#f5f8fb" stroke="#65a7d7"/>
+<path class="edge" d="M530 157 H562 V80 H1165 V187 H1190 M540 150 v14 M1178 180 l12 7 -12 7"/>
+<circle cx="1170" cy="187" r="4" fill="#f5f8fb" stroke="#65a7d7"/>
+<rect class="box" x="30" y="102" width="500" height="111" rx="4"/>
+<path class="head" d="M34 102 h492 a4 4 0 0 1 4 4 v35 h-500 v-35 a4 4 0 0 1 4 -4z"/>
+<text class="ht" x="46" y="127">DIM_STOCK</text>
+<text class="field" x="46" y="162">stock_id</text>
+<text class="key" x="370" y="162">PK</text>
+<text class="type" x="435" y="162">integer</text>
+<path class="rule" d="M46 171 h468"/>
+<text class="field" x="46" y="192">ticker</text>
+<text class="key" x="370" y="192">UK</text>
+<text class="type" x="435" y="192">text</text>
+<rect class="box" x="610" y="102" width="500" height="231" rx="4"/>
+<path class="head" d="M614 102 h492 a4 4 0 0 1 4 4 v35 h-500 v-35 a4 4 0 0 1 4 -4z"/>
+<text class="ht" x="626" y="127">DIM_DATE</text>
+<text class="field" x="626" y="162">date_id</text>
+<text class="key" x="950" y="162">PK</text>
+<text class="type" x="1015" y="162">integer</text>
+<path class="rule" d="M626 171 h468"/>
+<text class="field" x="626" y="192">calendar_date</text>
+<text class="key" x="950" y="192">UK</text>
+<text class="type" x="1015" y="192">text</text>
+<path class="rule" d="M626 201 h468"/>
+<text class="field" x="626" y="222">year</text>
+<text class="key" x="950" y="222"></text>
+<text class="type" x="1015" y="222">integer</text>
+<path class="rule" d="M626 231 h468"/>
+<text class="field" x="626" y="252">quarter</text>
+<text class="key" x="950" y="252"></text>
+<text class="type" x="1015" y="252">integer</text>
+<path class="rule" d="M626 261 h468"/>
+<text class="field" x="626" y="282">month</text>
+<text class="key" x="950" y="282"></text>
+<text class="type" x="1015" y="282">integer</text>
+<path class="rule" d="M626 291 h468"/>
+<text class="field" x="626" y="312">day</text>
+<text class="key" x="950" y="312"></text>
+<text class="type" x="1015" y="312">integer</text>
+<rect class="box" x="1190" y="102" width="500" height="261" rx="4"/>
+<path class="head" d="M1194 102 h492 a4 4 0 0 1 4 4 v35 h-500 v-35 a4 4 0 0 1 4 -4z"/>
+<text class="ht" x="1206" y="127">FACT_DAILY_PRICE</text>
+<text class="field" x="1206" y="162">daily_price_id</text>
+<text class="key" x="1530" y="162">PK</text>
+<text class="type" x="1595" y="162">integer</text>
+<path class="rule" d="M1206 171 h468"/>
+<text class="field" x="1206" y="192">stock_id</text>
+<text class="key" x="1530" y="192">FK</text>
+<text class="type" x="1595" y="192">integer</text>
+<path class="rule" d="M1206 201 h468"/>
+<text class="field" x="1206" y="222">date_id</text>
+<text class="key" x="1530" y="222">FK</text>
+<text class="type" x="1595" y="222">integer</text>
+<path class="rule" d="M1206 231 h468"/>
+<text class="field" x="1206" y="252">open</text>
+<text class="key" x="1530" y="252"></text>
+<text class="type" x="1595" y="252">text</text>
+<path class="rule" d="M1206 261 h468"/>
+<text class="field" x="1206" y="282">high</text>
+<text class="key" x="1530" y="282"></text>
+<text class="type" x="1595" y="282">text</text>
+<path class="rule" d="M1206 291 h468"/>
+<text class="field" x="1206" y="312">low</text>
+<text class="key" x="1530" y="312"></text>
+<text class="type" x="1595" y="312">text</text>
+<path class="rule" d="M1206 321 h468"/>
+<text class="field" x="1206" y="342">close</text>
+<text class="key" x="1530" y="342"></text>
+<text class="type" x="1595" y="342">text</text>
+<text class="cap" x="30" y="423">PK = primary key  ·  FK = foreign key  ·  UK = single-column unique key</text>
+</svg>

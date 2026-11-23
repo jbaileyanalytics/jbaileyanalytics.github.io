@@ -1,0 +1,9 @@
+services:
+  batch:
+    build:
+      context: .
+      dockerfile: Dockerfile.batch
+    volumes:
+      - ./results/market-data.sqlite:/input/market-data.sqlite:ro
+      - ./results:/output
+    command: ["--database", "/input/market-data.sqlite", "--output", "/output/parquet-batch-v1"]

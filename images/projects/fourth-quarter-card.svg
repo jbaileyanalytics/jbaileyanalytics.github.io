@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+  <title id="title">NFL Player Analytics</title>
+  <desc id="desc">A stylized football field and analysis panels for the player analytics dashboard.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102d32"/><stop offset="1" stop-color="#1d4a3f"/></linearGradient></defs>
+  <rect width="900" height="500" fill="url(#bg)"/>
+  <rect x="50" y="42" width="800" height="416" rx="8" fill="#193c37" stroke="#6a9380" stroke-opacity=".55"/>
+  <text x="84" y="95" fill="#d9e9dd" font-family="Arial,sans-serif" font-size="17" font-weight="bold" letter-spacing="4">NFL PLAYER ANALYTICS</text>
+  <text x="84" y="126" fill="#9cbaab" font-family="Arial,sans-serif" font-size="13" letter-spacing="2">PLAYER PERFORMANCE / NFLVERSE</text>
+  <path d="M84 154H816" stroke="#779988" stroke-opacity=".4"/>
+  <rect x="84" y="187" width="352" height="220" rx="4" fill="#244d42"/>
+  <path d="M125 198V394 M185 198V394 M245 198V394 M305 198V394 M365 198V394 M425 198V394" stroke="#c3dace" stroke-opacity=".19"/>
+  <path d="M120 341H205L261 274H354" fill="none" stroke="#e3af80" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M340 263L356 274L340 285" fill="none" stroke="#e3af80" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="120" cy="341" r="9" fill="#e3af80"/><circle cx="205" cy="341" r="7" fill="#b4d5c2"/><circle cx="261" cy="274" r="7" fill="#b4d5c2"/>
+  <rect x="468" y="187" width="348" height="100" rx="4" fill="#f3f5ef"/>
+  <text x="491" y="220" fill="#809188" font-family="Arial,sans-serif" font-size="11" font-weight="bold" letter-spacing="2">PLAYER PROFILE</text>
+  <text x="491" y="252" fill="#153b35" font-family="Arial,sans-serif" font-size="20" font-weight="bold">Workload &amp; efficiency</text>
+  <rect x="468" y="306" width="164" height="101" rx="4" fill="#f3f5ef"/><rect x="650" y="306" width="166" height="101" rx="4" fill="#e0eee5"/>
+  <text x="490" y="340" fill="#809188" font-family="Arial,sans-serif" font-size="10" font-weight="bold" letter-spacing="1">WEEKLY TRENDS</text>
+  <path d="M491 379H608 M503 379V360 M524 379V351 M545 379V364 M566 379V343 M587 379V354" stroke="#6c9b83" stroke-width="8"/>
+  <text x="672" y="340" fill="#6b8577" font-family="Arial,sans-serif" font-size="10" font-weight="bold" letter-spacing="1">COMPARISON</text>
+  <path d="M672 361H788 M672 376H754" stroke="#c47b5b" stroke-width="7" stroke-linecap="round"/>
+</svg>

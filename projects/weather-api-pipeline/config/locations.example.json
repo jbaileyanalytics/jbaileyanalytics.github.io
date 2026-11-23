@@ -1,0 +1,12 @@
+[
+  {"location_code": "CHI", "name": "Chicago planning location", "latitude": 41.8781, "longitude": -87.6298, "timezone": "America/Chicago"},
+  {"location_code": "DFW", "name": "Dallas planning location", "latitude": 32.7767, "longitude": -96.797, "timezone": "America/Chicago"},
+  {"location_code": "ATL", "name": "Atlanta planning location", "latitude": 33.749, "longitude": -84.388, "timezone": "America/New_York"},
+  {"location_code": "MEM", "name": "Memphis planning location", "latitude": 35.1495, "longitude": -90.049, "timezone": "America/Chicago"},
+  {"location_code": "SDF", "name": "Louisville planning location", "latitude": 38.2527, "longitude": -85.7585, "timezone": "America/New_York"},
+  {"location_code": "LAX", "name": "Los Angeles planning location", "latitude": 34.0522, "longitude": -118.2437, "timezone": "America/Los_Angeles"},
+  {"location_code": "EWR", "name": "Newark planning location", "latitude": 40.7357, "longitude": -74.1724, "timezone": "America/New_York"},
+  {"location_code": "SEA", "name": "Seattle planning location", "latitude": 47.6062, "longitude": -122.3321, "timezone": "America/Los_Angeles"},
+  {"location_code": "MIA", "name": "Miami planning location", "latitude": 25.7617, "longitude": -80.1918, "timezone": "America/New_York"},
+  {"location_code": "DEN", "name": "Denver planning location", "latitude": 39.7392, "longitude": -104.9903, "timezone": "America/Denver"}
+]

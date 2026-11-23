@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1720" height="871" viewBox="0 0 1720 871" role="img" aria-labelledby="title desc">
+<title id="title">nfl-analytics relationship model</title>
+<desc id="desc">Relationships reflect SQLite foreign keys. Existing source-to-product documentation is retained.</desc>
+<style>.bg{fill:#f5f8fb}.box{fill:#fff;stroke:#86b9df;stroke-width:2}.head{fill:#267fc2}.ht{fill:#fff;font:700 16px Segoe UI,Arial}.field{fill:#233d50;font:14px Segoe UI,Arial}.type{fill:#6b8291;font:13px Segoe UI,Arial}.key{fill:#2476ad;font:700 11px Segoe UI,Arial}.rule{stroke:#e7eff5}.edge{fill:none;stroke:#65a7d7;stroke-width:1.7}.cap{fill:#597184;font:13px Segoe UI,Arial}.heading{fill:#243f52;font:600 21px Segoe UI,Arial}</style>
+<rect class="bg" width="1720" height="871"/>
+<text class="heading" x="30" y="36">Nfl Analytics relationships</text>
+<text class="cap" x="30" y="62">Relationships reflect SQLite foreign keys. Existing source-to-product documentation is retained.</text>
+<path class="edge" d="M530 157 H555 V187 H610 M540 150 v14 M598 180 l12 7 -12 7"/>
+<circle cx="590" cy="187" r="4" fill="#f5f8fb" stroke="#65a7d7"/>
+<path class="edge" d="M1110 157 H1142 V247 H1190 M1120 150 v14 M1178 240 l12 7 -12 7"/>
+<circle cx="1170" cy="247" r="4" fill="#f5f8fb" stroke="#65a7d7"/>
+<path class="edge" d="M1110 157 H1149 V217 H1190 M1120 150 v14 M1178 210 l12 7 -12 7"/>
+<circle cx="1170" cy="217" r="4" fill="#f5f8fb" stroke="#65a7d7"/>
+<path class="edge" d="M530 316 H576 V80 H1165 V307 H1190 M540 309 v14 M1178 300 l12 7 -12 7"/>
+<circle cx="1170" cy="307" r="4" fill="#f5f8fb" stroke="#65a7d7"/>
+<path class="edge" d="M530 316 H583 V80 H1165 V277 H1190 M540 309 v14 M1178 270 l12 7 -12 7"/>
+<circle cx="1170" cy="277" r="4" fill="#f5f8fb" stroke="#65a7d7"/>
+<path class="edge" d="M530 157 H555 V80 H1165 V217 H1190 M540 150 v14 M1178 210 l12 7 -12 7"/>
+<circle cx="1170" cy="217" r="4" fill="#f5f8fb" stroke="#65a7d7"/>
+<path class="edge" d="M1110 376 H1142 V187 H1190 M1120 369 v14 M1178 180 l12 7 -12 7"/>
+<circle cx="1170" cy="187" r="4" fill="#f5f8fb" stroke="#65a7d7"/>
+<path class="edge" d="M530 475 H569 V80 H1165 V157 H1190 M540 468 v14 M1178 150 l12 7 -12 7"/>
+<circle cx="1170" cy="157" r="4" fill="#f5f8fb" stroke="#65a7d7"/>
+<rect class="box" x="30" y="102" width="500" height="111" rx="4"/>
+<path class="head" d="M34 102 h492 a4 4 0 0 1 4 4 v35 h-500 v-35 a4 4 0 0 1 4 -4z"/>
+<text class="ht" x="46" y="127">DIM_PLAYER</text>
+<text class="field" x="46" y="162">player_key</text>
+<text class="key" x="370" y="162">PK</text>
+<text class="type" x="435" y="162">integer</text>
+<path class="rule" d="M46 171 h468"/>
+<text class="field" x="46" y="192">player_id</text>
+<text class="key" x="370" y="192">UK</text>
+<text class="type" x="435" y="192">text</text>
+<rect class="box" x="610" y="102" width="500" height="171" rx="4"/>
+<path class="head" d="M614 102 h492 a4 4 0 0 1 4 4 v35 h-500 v-35 a4 4 0 0 1 4 -4z"/>
+<text class="ht" x="626" y="127">DIM_PLAYER_PROFILE</text>
+<text class="field" x="626" y="162">profile_key</text>
+<text class="key" x="950" y="162">PK</text>
+<text class="type" x="1015" y="162">integer</text>
+<path class="rule" d="M626 171 h468"/>
+<text class="field" x="626" y="192">player_key</text>
+<text class="key" x="950" y="192">FK</text>
+<text class="type" x="1015" y="192">integer</text>
+<path class="rule" d="M626 201 h468"/>
+<text class="field" x="626" y="222">player_display_name</text>
+<text class="key" x="950" y="222"></text>
+<text class="type" x="1015" y="222">text</text>
+<path class="rule" d="M626 231 h468"/>
+<text class="field" x="626" y="252">position</text>
+<text class="key" x="950" y="252"></text>
+<text class="type" x="1015" y="252">text</text>
+<rect class="box" x="30" y="261" width="500" height="111" rx="4"/>
+<path class="head" d="M34 261 h492 a4 4 0 0 1 4 4 v35 h-500 v-35 a4 4 0 0 1 4 -4z"/>
+<text class="ht" x="46" y="286">DIM_TEAM</text>
+<text class="field" x="46" y="321">team_key</text>
+<text class="key" x="370" y="321">PK</text>
+<text class="type" x="435" y="321">integer</text>
+<path class="rule" d="M46 330 h468"/>
+<text class="field" x="46" y="351">team_code</text>
+<text class="key" x="370" y="351">UK</text>
+<text class="type" x="435" y="351">text</text>
+<rect class="box" x="610" y="321" width="500" height="171" rx="4"/>
+<path class="head" d="M614 321 h492 a4 4 0 0 1 4 4 v35 h-500 v-35 a4 4 0 0 1 4 -4z"/>
+<text class="ht" x="626" y="346">DIM_SEASON_WEEK</text>
+<text class="field" x="626" y="381">week_key</text>
+<text class="key" x="950" y="381">PK</text>
+<text class="type" x="1015" y="381">integer</text>
+<path class="rule" d="M626 390 h468"/>
+<text class="field" x="626" y="411">season</text>
+<text class="key" x="950" y="411"></text>
+<text class="type" x="1015" y="411">integer</text>
+<path class="rule" d="M626 420 h468"/>
+<text class="field" x="626" y="441">season_type</text>
+<text class="key" x="950" y="441"></text>
+<text class="type" x="1015" y="441">text</text>
+<path class="rule" d="M626 450 h468"/>
+<text class="field" x="626" y="471">week</text>
+<text class="key" x="950" y="471"></text>
+<text class="type" x="1015" y="471">integer</text>
+<rect class="box" x="30" y="420" width="500" height="201" rx="4"/>
+<path class="head" d="M34 420 h492 a4 4 0 0 1 4 4 v35 h-500 v-35 a4 4 0 0 1 4 -4z"/>
+<text class="ht" x="46" y="445">MODEL_SNAPSHOT</text>
+<text class="field" x="46" y="480">snapshot_key</text>
+<text class="key" x="370" y="480">PK</text>
+<text class="type" x="435" y="480">integer</text>
+<path class="rule" d="M46 489 h468"/>
+<text class="field" x="46" y="510">canonical_sha256</text>
+<text class="key" x="370" y="510">UK</text>
+<text class="type" x="435" y="510">text</text>
+<path class="rule" d="M46 519 h468"/>
+<text class="field" x="46" y="540">first_payload_sha256</text>
+<text class="key" x="370" y="540"></text>
+<text class="type" x="435" y="540">text</text>
+<path class="rule" d="M46 549 h468"/>
+<text class="field" x="46" y="570">accepted_rows</text>
+<text class="key" x="370" y="570"></text>
+<text class="type" x="435" y="570">integer</text>
+<path class="rule" d="M46 579 h468"/>
+<text class="field" x="46" y="600">loaded_at_utc</text>
+<text class="key" x="370" y="600"></text>
+<text class="type" x="435" y="600">text</text>
+<rect class="box" x="1190" y="102" width="500" height="621" rx="4"/>
+<path class="head" d="M1194 102 h492 a4 4 0 0 1 4 4 v35 h-500 v-35 a4 4 0 0 1 4 -4z"/>
+<text class="ht" x="1206" y="127">FACT_PLAYER_WEEK</text>
+<text class="field" x="1206" y="162">snapshot_key</text>
+<text class="key" x="1530" y="162">PK/FK</text>
+<text class="type" x="1595" y="162">integer</text>
+<path class="rule" d="M1206 171 h468"/>
+<text class="field" x="1206" y="192">week_key</text>
+<text class="key" x="1530" y="192">PK/FK</text>
+<text class="type" x="1595" y="192">integer</text>
+<path class="rule" d="M1206 201 h468"/>
+<text class="field" x="1206" y="222">player_key</text>
+<text class="key" x="1530" y="222">PK/FK</text>
+<text class="type" x="1595" y="222">integer</text>
+<path class="rule" d="M1206 231 h468"/>
+<text class="field" x="1206" y="252">profile_key</text>
+<text class="key" x="1530" y="252">FK</text>
+<text class="type" x="1595" y="252">integer</text>
+<path class="rule" d="M1206 261 h468"/>
+<text class="field" x="1206" y="282">team_key</text>
+<text class="key" x="1530" y="282">FK</text>
+<text class="type" x="1595" y="282">integer</text>
+<path class="rule" d="M1206 291 h468"/>
+<text class="field" x="1206" y="312">opponent_team_key</text>
+<text class="key" x="1530" y="312">FK</text>
+<text class="type" x="1595" y="312">integer</text>
+<path class="rule" d="M1206 321 h468"/>
+<text class="field" x="1206" y="342">game_id</text>
+<text class="key" x="1530" y="342"></text>
+<text class="type" x="1595" y="342">text</text>
+<path class="rule" d="M1206 351 h468"/>
+<text class="field" x="1206" y="372">completions</text>
+<text class="key" x="1530" y="372"></text>
+<text class="type" x="1595" y="372">integer</text>
+<path class="rule" d="M1206 381 h468"/>
+<text class="field" x="1206" y="402">attempts</text>
+<text class="key" x="1530" y="402"></text>
+<text class="type" x="1595" y="402">integer</text>
+<path class="rule" d="M1206 411 h468"/>
+<text class="field" x="1206" y="432">passing_tds</text>
+<text class="key" x="1530" y="432"></text>
+<text class="type" x="1595" y="432">integer</text>
+<path class="rule" d="M1206 441 h468"/>
+<text class="field" x="1206" y="462">passing_interceptions</text>
+<text class="key" x="1530" y="462"></text>
+<text class="type" x="1595" y="462">integer</text>
+<path class="rule" d="M1206 471 h468"/>
+<text class="field" x="1206" y="492">carries</text>
+<text class="key" x="1530" y="492"></text>
+<text class="type" x="1595" y="492">integer</text>
+<path class="rule" d="M1206 501 h468"/>
+<text class="field" x="1206" y="522">rushing_tds</text>
+<text class="key" x="1530" y="522"></text>
+<text class="type" x="1595" y="522">integer</text>
+<path class="rule" d="M1206 531 h468"/>
+<text class="field" x="1206" y="552">targets</text>
+<text class="key" x="1530" y="552"></text>
+<text class="type" x="1595" y="552">integer</text>
+<path class="rule" d="M1206 561 h468"/>
+<text class="field" x="1206" y="582">receptions</text>
+<text class="key" x="1530" y="582"></text>
+<text class="type" x="1595" y="582">integer</text>
+<path class="rule" d="M1206 591 h468"/>
+<text class="field" x="1206" y="612">receiving_tds</text>
+<text class="key" x="1530" y="612"></text>
+<text class="type" x="1595" y="612">integer</text>
+<path class="rule" d="M1206 621 h468"/>
+<text class="field" x="1206" y="642">passing_yards</text>
+<text class="key" x="1530" y="642"></text>
+<text class="type" x="1595" y="642">integer</text>
+<path class="rule" d="M1206 651 h468"/>
+<text class="field" x="1206" y="672">rushing_yards</text>
+<text class="key" x="1530" y="672"></text>
+<text class="type" x="1595" y="672">integer</text>
+<path class="rule" d="M1206 681 h468"/>
+<text class="field" x="1206" y="702">receiving_yards</text>
+<text class="key" x="1530" y="702"></text>
+<text class="type" x="1595" y="702">integer</text>
+<text class="cap" x="30" y="783">PK = primary key  ·  FK = foreign key  ·  UK = single-column unique key</text>
+</svg>

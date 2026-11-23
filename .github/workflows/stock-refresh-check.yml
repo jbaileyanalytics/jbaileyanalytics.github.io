@@ -1,0 +1,78 @@
+name: Portfolio and stock dashboard
+
+on:
+  workflow_dispatch:
+    inputs:
+      refresh_nfl:
+        description: Refresh the current NFL season during this run
+        required: false
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+  schedule:
+    # Daily at 6:00 a.m. Central, including daylight saving time.
+    - cron: '0 6 * * *'
+      timezone: 'America/Chicago'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install data processing dependencies
+        run: python -m pip install 'kagglehub==1.0.0' 'pandas==2.3.3'
+      - name: Test stock processing
+        run: python -m unittest discover -s projects/stock-market-analytics/tests -v
+      - name: Test NFL publishing safeguards
+        run: python -m unittest discover -s projects/nfl-analytics/tests -p 'test_prepare_published_data.py' -v
+      - name: Download and build candidate snapshot
+        run: python projects/stock-market-analytics/pipelines/refresh_from_kaggle.py --output "$RUNNER_TEMP/stock-refresh"
+      - name: Validate candidate and prevent older published data
+        run: python projects/stock-market-analytics/pipelines/validate_publication.py --candidate "$RUNNER_TEMP/stock-refresh/candidate/site"
+      - name: Preserve or refresh NFL data
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          MANUAL_NFL_REFRESH: ${{ inputs.refresh_nfl }}
+        run: |
+          refresh_flag=""
+          if [ "$EVENT_NAME" = "schedule" ]; then
+            case "$(TZ=America/Chicago date +%u)" in 2|4) refresh_flag="--refresh";; esac
+          elif [ "$EVENT_NAME" = "workflow_dispatch" ] && [ "$MANUAL_NFL_REFRESH" = "true" ]; then
+            refresh_flag="--refresh"
+          fi
+          python projects/nfl-analytics/prepare_published_data.py --output "$RUNNER_TEMP/nfl-pages-data" $refresh_flag
+      - name: Assemble public portfolio and dashboards
+        run: python projects/stock-market-analytics/pipelines/assemble_portfolio_site.py --candidate "$RUNNER_TEMP/stock-refresh/candidate/site" --nfl-data "$RUNNER_TEMP/nfl-pages-data" --output "$RUNNER_TEMP/portfolio-site"
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/portfolio-site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy portfolio
+        id: deployment
+        uses: actions/deploy-pages@v4

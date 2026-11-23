@@ -1,0 +1,11 @@
+data/raw/
+results/
+.venv/
+__pycache__/
+# Earlier local baseline and its notes are not part of the public showcase.
+pipeline.py
+requirements.txt
+docs/relationship-model.svg
+docs/local-baseline.md
+# Local Power BI authoring files and notes are not part of the public project.
+powerbi/

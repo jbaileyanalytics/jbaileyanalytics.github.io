@@ -1,0 +1,85 @@
+name: weather-api-pipeline
+services:
+  database:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: weather
+      POSTGRES_USER: weather
+      POSTGRES_PASSWORD: ${WEATHER_DB_PASSWORD:?Set WEATHER_DB_PASSWORD in .env}
+    volumes:
+      - weather_postgres:/var/lib/postgresql/data
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/001-schema.sql:ro
+      - ./sql/migrations/002_run_tracking.sql:/docker-entrypoint-initdb.d/002-run-tracking.sql:ro
+      - ./sql/migrations:/app/migrations:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U weather -d weather"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+  pipeline:
+    build: .
+    profiles: ["tools"]
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      PGHOST: database
+      PGPORT: "5432"
+      PGDATABASE: weather
+      PGUSER: weather
+      PGPASSWORD: ${WEATHER_DB_PASSWORD:?Set WEATHER_DB_PASSWORD in .env}
+    volumes:
+      - ./results:/app/results
+    entrypoint: ["python", "pipelines/load_forecast.py"]
+  scheduler:
+    build: .
+    profiles: ["scheduler"]
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      PGHOST: database
+      PGPORT: "5432"
+      PGDATABASE: weather
+      PGUSER: weather
+      PGPASSWORD: ${WEATHER_DB_PASSWORD:?Set WEATHER_DB_PASSWORD in .env}
+      WEATHER_RUN_LOCAL: ${WEATHER_RUN_LOCAL:-12:30}
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - ./results:/app/results
+    entrypoint: ["python", "pipelines/scheduler.py"]
+    restart: unless-stopped
+  test-database:
+    image: postgres:16
+    profiles: ["test"]
+    environment:
+      POSTGRES_DB: weather_test
+      POSTGRES_USER: weather
+      POSTGRES_PASSWORD: test-only-local
+    tmpfs:
+      - /var/lib/postgresql/data
+    volumes:
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/001-schema.sql:ro
+      - ./sql/migrations/002_run_tracking.sql:/docker-entrypoint-initdb.d/002-run-tracking.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U weather -d weather_test"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  integration-tests:
+    build: .
+    profiles: ["test"]
+    depends_on:
+      test-database:
+        condition: service_healthy
+    environment:
+      PGHOST: test-database
+      PGPORT: "5432"
+      PGDATABASE: weather_test
+      PGUSER: weather
+      PGPASSWORD: test-only-local
+      WEATHER_INTEGRATION_DB: "1"
+    entrypoint: ["python", "-m", "unittest", "discover", "-s", "tests", "-v"]
+volumes:
+  weather_postgres:
