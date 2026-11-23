@@ -28,7 +28,7 @@
 .retail-hero-visual img{display:block;width:100%;height:auto;margin:14px 0;border:1px solid #6b8b84}
 .retail-hero-visual-caption{color:#d2e5dc;font-weight:400;letter-spacing:.4px}
 .retail-hero-visual:focus-visible{outline:3px solid #b5dbc9;outline-offset:4px}
-@media(max-width:900px){.retail-case .interior-hero .lede,.retail-case .case-hero-proof{max-width:100%}.retail-hero-visual{position:static;transform:none;width:100%;max-width:620px;margin-top:34px;box-sizing:border-box}}
+@media(max-width:900px){.retail-case .interior-hero .lede,.retail-case .case-hero-proof{max-width:100%}.retail-hero-visual{display:block;position:static;transform:none;width:100%;max-width:620px;margin-top:34px;box-sizing:border-box}}
 
 /* Weather technologies: a compact supplement to the existing project details. */
 .weather-stack{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:22px 0 30px;padding:15px 19px;border:1px solid #b8cdd0;background:#e3edf0}
