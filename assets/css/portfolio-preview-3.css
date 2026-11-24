@@ -19,6 +19,9 @@
 
 @media(min-width:761px){.placeholder-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
+/* Give the contact section its own muted blue-gray surface. */
+.contact-section{background:#d7e4e6}
+
 /* Extend each project link over its card without changing keyboard navigation. */
 .placeholder-grid article{position:relative;transition:border-color .2s,box-shadow .2s}
 .placeholder-grid article .text-link::after{content:"";position:absolute;inset:0}

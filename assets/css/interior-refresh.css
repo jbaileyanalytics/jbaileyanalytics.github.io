@@ -20,3 +20,6 @@
 .site-footer div{display:flex;gap:20px}.case-table{display:block;overflow-x:auto}
 @media(max-width:850px){.case-nav{align-items:center}.site-contact .wrap{align-items:flex-start;flex-direction:column}}
 @media(max-width:760px){.interior-hero{padding:52px 0}.interior-hero h1{font-size:43px;letter-spacing:-1.7px}.interior-hero .lede{font-size:16px}body:has(.menu-toggle:not([hidden])) nav.case-nav:not(.is-open){display:flex}.site-contact .wrap{padding-block:45px}.cards{grid-template-columns:1fr}}
+
+/* About page credentials: compact, individually readable groups. */
+.about-credentials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:20px 0}.about-credentials section+section{margin-top:18px}.about-credentials h3{margin:0 0 6px;color:#31515a;font-size:13px;line-height:1.4}.about-credentials ul{list-style:none;margin:0;padding:0;color:#52636c;font-size:13px;line-height:1.45}.about-credentials li+li{margin-top:5px}@media(max-width:420px){.about-credentials{grid-template-columns:1fr;gap:18px}}
