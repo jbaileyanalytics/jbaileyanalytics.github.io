@@ -16,8 +16,10 @@ def validate(candidate, previous=None):
     total = len(index)
     if total < 400 or overview['total_symbols'] != total:
         raise ValueError('Candidate symbol count is too small or inconsistent')
-    if overview['eligible_symbols'] != len(overview['stocks']) or len(overview['stocks']) < total * 0.90:
+    if overview['observed_symbols'] != len(overview['stocks']) or overview['eligible_symbols'] != sum(s.get('change_pct') is not None for s in overview['stocks']) or overview['eligible_symbols'] < total * 0.90:
         raise ValueError('Candidate has insufficient eligible market coverage')
+    if overview['previous_close_eligible_symbols'] != sum(s.get('previous_close_change_pct') is not None for s in overview['stocks']):
+        raise ValueError('Candidate previous-close coverage is inconsistent')
     if previous is not None:
         if current_date < date.fromisoformat(previous['date']):
             raise ValueError('Candidate market date is older than the published dashboard')

@@ -20,6 +20,9 @@ const fetch = async url => {
 const context = {document, fetch, console, Intl, Date, Number, String, Math, Blob, URL};
 (async () => {
   await vm.runInNewContext(fs.readFileSync(path.join(root, 'website/app.js'), 'utf8'), context);
+  assert.equal(vm.runInNewContext('price("167.035")', context), '167.04');
+  assert.equal(vm.runInNewContext('price("209.9769")', context), '209.98');
+  assert.equal(vm.runInNewContext('price(null)', context), '—');
   assert.equal(document.getElementById('ticker').textContent, 'AAPL');
   assert.equal(document.getElementById('dashboard').hidden, false);
   assert.match(document.getElementById('latest-close').textContent, /352\.78/);

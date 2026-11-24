@@ -4,6 +4,8 @@ These calculations use the local snapshot and the per-field quality rules in the
 
 ## Closing price and returns
 
+The market overview offers two comparisons for the latest date observed across the dataset: **previous close to close** and **open to close**. Each is `(latest close / baseline - 1) × 100`, using either the stock's previous valid recorded close or the same day's open as the baseline. Gainers and losers use the selected measure. Both prices must be valid and positive; unavailable changes appear as N/A and are excluded from rankings. A prior valid close can be older than the previous trading day; the source does not establish a complete exchange calendar. Stocks without a row on the latest dataset date are not displayed in the heatmap. Source currency and corporate-action adjustments remain unverified.
+
 - **Latest close:** close on the stock's most recent recorded date. If the close is unavailable, report it as unavailable rather than silently moving to an earlier date. The previous valid close is separately labeled with its date.
 - **Cumulative price return:** `(ending close / baseline close - 1) × 100`. Both prices must be positive and valid. The output includes the baseline date and a reason when unavailable. Multi-year values are cumulative, not annualized.
 - **YTD:** baseline is the last valid close on or before December 31 of the prior calendar year.

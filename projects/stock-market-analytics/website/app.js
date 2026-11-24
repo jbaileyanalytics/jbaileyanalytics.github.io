@@ -2,7 +2,7 @@ const DATA = '../results/reporting-v1/website/';
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const number = value => value === null || value === undefined || value === '' || !Number.isFinite(Number(value)) ? null : Number(value);
-const price = value => {const n = number(value); return n === null ? '—' : new Intl.NumberFormat('en-US', {minimumFractionDigits:2, maximumFractionDigits:4}).format(n);};
+const price = value => {const n = number(value); return n === null ? '—' : new Intl.NumberFormat('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}).format(n);};
 const chartPrice = value => new Intl.NumberFormat('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}).format(value);
 const dateLabel = value => value ? new Date(value + 'T12:00:00Z').toLocaleDateString('en-US', {timeZone:'UTC', month:'short', day:'numeric', year:'numeric'}) : '—';
 const pct = value => {const n = number(value); return n === null ? '—' : `${n > 0 ? '+' : ''}${n.toFixed(2)}%`;};

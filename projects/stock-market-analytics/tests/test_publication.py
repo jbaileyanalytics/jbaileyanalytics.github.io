@@ -37,14 +37,17 @@ class PublicationTests(unittest.TestCase):
             data = Path(temporary) / 'data'
             data.mkdir()
             (data / 'stocks.json').write_text(json.dumps([{}] * 400), encoding='utf-8')
-            overview = {'date': '2024-01-02', 'total_symbols': 400,
-                        'eligible_symbols': 400, 'stocks': [{}] * 400}
+            overview = {'date': '2024-01-02', 'total_symbols': 400, 'observed_symbols': 400,
+                        'eligible_symbols': 400, 'previous_close_eligible_symbols': 400,
+                        'stocks': [{'change_pct': '1', 'previous_close_change_pct': '1'}] * 400}
             (data / 'market-overview.json').write_text(json.dumps(overview), encoding='utf-8')
             self.assertEqual(publication.validate(temporary)['symbols'], 400)
             with self.assertRaisesRegex(ValueError, 'older'):
                 publication.validate(temporary, {'date': '2024-01-03', 'total_symbols': 400})
             overview['eligible_symbols'] = 300
-            overview['stocks'] = [{}] * 300
+            overview['stocks'] = [{'change_pct': '1', 'previous_close_change_pct': '1'}] * 300
+            overview['observed_symbols'] = 300
+            overview['previous_close_eligible_symbols'] = 300
             (data / 'market-overview.json').write_text(json.dumps(overview), encoding='utf-8')
             with self.assertRaisesRegex(ValueError, 'coverage'):
                 publication.validate(temporary)
