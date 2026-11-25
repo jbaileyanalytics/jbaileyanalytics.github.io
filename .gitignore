@@ -81,6 +81,8 @@ projects/weather-api-pipeline/results/
 projects/weather-api-pipeline/api_response
 # Keep the unvalidated AWS infrastructure design local until it is ready for review.
 projects/weather-api-cloud/
+# Keep the in-progress healthcare quality and forecasting project local until complete.
+projects/healthcare-quality-predictive-analytics/
 # Personal study notes are local only and are not part of the public portfolio.
 /private-notes/
 # Personal reference materials are not part of the public portfolio.

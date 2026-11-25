@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" role="img" aria-labelledby="title desc">
+  <title id="title">A/B analysis illustration</title><desc id="desc">Two comparison curves and a central reference line.</desc>
+  <rect width="600" height="300" fill="#173744"/>
+  <path d="M42 238H558M42 187H558M42 136H558M42 85H558" stroke="#769c98" stroke-opacity=".23"/>
+  <path d="M300 58V240" stroke="#b6dccc" stroke-opacity=".55" stroke-dasharray="5 7"/>
+  <path d="M55 237C112 237 133 225 158 186S202 97 235 98 276 152 300 190 329 231 350 237Z" fill="#83c8b2" fill-opacity=".16"/>
+  <path d="M55 237C112 237 133 225 158 186S202 97 235 98 276 152 300 190 329 231 350 237" fill="none" stroke="#90d4be" stroke-width="4"/>
+  <path d="M225 237C276 237 299 223 323 182S368 112 400 112 441 163 464 199 512 236 550 237Z" fill="#e8b99a" fill-opacity=".12"/>
+  <path d="M225 237C276 237 299 223 323 182S368 112 400 112 441 163 464 199 512 236 550 237" fill="none" stroke="#e4b394" stroke-width="4"/>
+  <circle cx="235" cy="98" r="5" fill="#90d4be"/><circle cx="400" cy="112" r="5" fill="#e4b394"/>
+  <text x="43" y="48" fill="#b6dccc" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2">EXPERIMENT ANALYSIS</text>
+  <text x="43" y="274" fill="#c5d7d3" font-family="Arial,sans-serif" font-size="12">GROUP A</text><text x="496" y="274" fill="#c5d7d3" font-family="Arial,sans-serif" font-size="12">GROUP B</text>
+</svg>

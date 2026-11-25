@@ -21,5 +21,25 @@
 @media(max-width:850px){.case-nav{align-items:center}.site-contact .wrap{align-items:flex-start;flex-direction:column}}
 @media(max-width:760px){.interior-hero{padding:52px 0}.interior-hero h1{font-size:43px;letter-spacing:-1.7px}.interior-hero .lede{font-size:16px}body:has(.menu-toggle:not([hidden])) nav.case-nav:not(.is-open){display:flex}.site-contact .wrap{padding-block:45px}.cards{grid-template-columns:1fr}}
 
+/* Projects introduction and earlier-work illustrations. */
+.projects-page .projects-hero-copy .lede{max-width:690px}
+.projects-page .cards .card>img{width:100%;aspect-ratio:2 / 1;object-fit:cover;display:block}
+
+/* Projects page introduction. */
+.projects-page .projects-hero{overflow:hidden;padding:84px 0 76px}
+.projects-page .projects-hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(48px,6vw,90px);align-items:center}
+.projects-page .projects-hero-copy{max-width:850px}
+.projects-page .projects-hero-copy h1{font-size:clamp(40px,4.8vw,68px);letter-spacing:-2px;line-height:1.08;max-width:none}
+.projects-page .projects-hero-copy h1 span{color:#b0d8c8}
+.projects-page .projects-hero-copy .lede{max-width:600px;font-size:18px;line-height:1.7;color:#d5e2e0}
+.projects-hero-actions{display:flex;align-items:center;gap:27px;flex-wrap:wrap;margin-top:30px}
+.projects-hero-cta{display:inline-flex;align-items:center;gap:27px;padding:15px 20px;background:#b0d8c8;color:#12313a;text-decoration:none;font-size:14px;font-weight:700;transition:background .2s}
+.projects-hero-cta:hover{background:#d0eadf}
+.projects-hero-secondary{color:#e2eeea;font-size:14px;text-underline-offset:5px}
+.projects-hero-disciplines{display:flex;gap:12px 23px;flex-wrap:wrap;margin-top:42px;padding-top:20px;border-top:1px solid #49636b;color:#b4d7ca;font-size:10px;font-weight:700;letter-spacing:1.15px}
+.hero-flow{padding:28px 32px;background:linear-gradient(150deg,#214650,#1b3a44);border:1px solid #486b70;box-shadow:0 20px 60px #07182030}.hero-flow-top{display:flex;justify-content:space-between;gap:12px;color:#b0d8c8;font-size:10px;font-weight:700;letter-spacing:1.4px}.flow-diagram{margin-top:24px}.flow-node{display:grid;grid-template-columns:46px 1fr auto;gap:15px;align-items:center;padding:13px 15px;background:#17343e;border:1px solid #466970}.flow-node-result{background:#244b48;border-color:#78a899}.flow-node>div:nth-child(2){display:grid;gap:4px;min-width:0}.flow-node strong{color:#f3f8f6;font-size:15px;line-height:1.3}.flow-node small{color:#c4d8d4;font-size:12px;line-height:1.4}.flow-icon{display:grid;place-items:center;width:44px;height:44px;background:#284b52;border:1px solid #52766f;border-radius:5px}.flow-icon svg{width:28px;height:28px;stroke:#b6dfce;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.flow-node-result .flow-icon{background:#c2e4d4}.flow-node-result .flow-icon svg{stroke:#173f3c}.node-number{font-size:10px;letter-spacing:1px;color:#a1c7ba}.flow-connector{height:19px;display:flex;align-items:center;justify-content:center;color:#a5d5c3}.flow-connector span{height:100%;width:1px;background:#75a799}.flow-connector b{position:absolute;font-size:15px;line-height:1;margin-top:7px;font-weight:400;background:#1d3d46}.hero-flow-caption{display:flex;align-items:center;gap:8px;margin:21px 0 0;padding-top:18px;border-top:1px solid #54747a;color:#c6ded5;font-size:12px}.hero-flow-caption span{width:6px;height:6px;background:#acd8c5;border-radius:50%}
+@media(max-width:1000px){.projects-page .projects-hero{padding:58px 0}.projects-page .projects-hero-grid{grid-template-columns:1fr;gap:38px}.projects-page .projects-hero-copy h1{font-size:clamp(40px,7vw,60px)}.hero-flow{max-width:680px}}
+@media(max-width:550px){.projects-page .projects-hero-copy h1{font-size:clamp(35px,8vw,46px);letter-spacing:-1.5px}.projects-page .projects-hero-copy .lede{font-size:16px}.projects-hero-disciplines{margin-top:30px}.hero-flow{padding:23px}.hero-flow-step{gap:12px}.hero-flow-top{font-size:9px;letter-spacing:1px}}
+
 /* About page credentials: compact, individually readable groups. */
 .about-credentials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:20px 0}.about-credentials section+section{margin-top:18px}.about-credentials h3{margin:0 0 6px;color:#31515a;font-size:13px;line-height:1.4}.about-credentials ul{list-style:none;margin:0;padding:0;color:#52636c;font-size:13px;line-height:1.45}.about-credentials li+li{margin-top:5px}@media(max-width:420px){.about-credentials{grid-template-columns:1fr;gap:18px}}

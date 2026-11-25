@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" role="img" aria-labelledby="title desc">
+  <title id="title">Relational data modeling illustration</title><desc id="desc">Connected tables showing a relational structure.</desc>
+  <rect width="600" height="300" fill="#173744"/>
+  <text x="43" y="45" fill="#b6dccc" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2">RELATIONAL MODELING</text>
+  <path d="M229 129H276M324 129H369M300 157V195" fill="none" stroke="#91cbb8" stroke-width="3"/>
+  <rect x="50" y="78" width="180" height="105" rx="3" fill="#e8f1ec"/><path d="M50 110H230" stroke="#c3d7ce"/><text x="66" y="99" fill="#194d4c" font-family="Arial,sans-serif" font-size="12" font-weight="700">SOURCE</text><path d="M66 127H175M66 143H202M66 159H154" stroke="#88a9a1" stroke-width="3" stroke-linecap="round"/>
+  <rect x="369" y="78" width="180" height="105" rx="3" fill="#e8f1ec"/><path d="M369 110H549" stroke="#c3d7ce"/><text x="385" y="99" fill="#194d4c" font-family="Arial,sans-serif" font-size="12" font-weight="700">RELATED TABLE</text><path d="M385 127H492M385 143H523M385 159H475" stroke="#88a9a1" stroke-width="3" stroke-linecap="round"/>
+  <rect x="228" y="195" width="145" height="74" rx="3" fill="#b9decf"/><text x="243" y="220" fill="#194d4c" font-family="Arial,sans-serif" font-size="12" font-weight="700">KEYS &amp; JOINS</text><path d="M244 237H350M244 250H318" stroke="#6f9c8e" stroke-width="3" stroke-linecap="round"/>
+  <rect x="276" y="106" width="48" height="51" rx="4" fill="#2e7569"/><circle cx="300" cy="131" r="8" fill="none" stroke="#def2e9" stroke-width="3"/>
+</svg>
